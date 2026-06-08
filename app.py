@@ -127,7 +127,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 
-# --- HERO SECTION (only shown when no chat yet) ---
+
 if not st.session_state.messages:
     st.markdown("<h1 style='text-align:center; margin-bottom:0.25rem;'>🤖 Welcome to my LSTM Model</h1>", unsafe_allow_html=True)
     st.markdown("<p style='text-align:center; color:#888; margin-top:0; margin-bottom:1.25rem;'>A custom natural language processor built and trained from scratch.</p>", unsafe_allow_html=True)
@@ -141,7 +141,7 @@ if not st.session_state.messages:
     st.markdown("<hr style='margin: 1rem 0;'>", unsafe_allow_html=True)
 
 
-# --- RENDER EXISTING CHAT HISTORY ---
+
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.write(msg["content"])
